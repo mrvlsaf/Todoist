@@ -1,0 +1,5 @@
+.about-section {
+    background: url(./resources/background_about.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}

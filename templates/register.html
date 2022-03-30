@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %} Login {% endblock title %}
+{% block body %}
+<section class="vh-100 bg-image">
+	<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+		<div class="container h-100">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-12 col-md-9 col-lg-7 col-xl-6">
+					<div class="card" style="border-radius: 15px;">
+						<div class="card-body py-4 px-5">
+							<h3 class="text-uppercase text-center mb-4">Create an account</h3>
+							<form action="{{ url_for('register') }}" method="post">
+								<div class="msg">{{ msg }}</div>
+								<div class="form-outline mb-3">
+									<label class="form-label" for="form3Example1cg">Username</label>
+									<input type="text" id="username" name="username" required class="form-control" />
+								</div>
+								<div class="form-outline mb-3">
+									<label class="form-label" for="form3Example3cg">Your Email</label>
+									<input type="email" id="email" name="email" class="form-control" />
+								</div>
+								<div class="form-outline mb-3">
+									<label class="form-label" for="form3Example4cg">Password</label>
+									<input type="password" id="password" name="password" required class="form-control" />
+								</div>
+								<div class="d-flex justify-content-center">
+									<button type="submit" class="btn btn-dark btn-block">Register</button>
+								</div>
+								<p class="text-center text-muted mt-5 mb-0">Already have an account? <a
+										href="{{url_for('login')}}" class="fw-bold text-body"><u>Login here</u></a></p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock body %}

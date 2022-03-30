@@ -1,0 +1,18 @@
+{% extends 'base2.html' %}
+{% block body %}
+<div class="container my-3">
+    <h2>Update ToDo</h2>
+    <form action="/update/{{id}}" method="POST">
+        <div class="mb-3">
+            <label for="title" class="form-label">Todo Title</label>
+            <input type="text" class="form-control" value="{{rec.title}}" name="title" id="title"
+                aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="desc" class="form-label">Todo Description</label>
+            <input type="text" class="form-control" value="{{rec.description}}" name="description" id="desc">
+        </div>
+        <button type="submit" class="btn btn-dark">Update</button>
+    </form>
+</div>
+{% endblock body %}
